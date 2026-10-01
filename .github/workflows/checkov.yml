@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [ "main", "master" ]
 
+# This top-level block fixes the CKV2_GHA_1 error
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
 jobs:
   scan:
     runs-on: ubuntu-latest
